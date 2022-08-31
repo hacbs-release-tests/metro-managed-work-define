@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: java-springboot
+  namespace: managed
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/hacbs-release-tests/java-springboot@sha256:79722944ae61f5382c25f435b8cfa551bb706e9996f64994ef186bef6fb715e5
+        name: container-image
+        resources: {}
+status: {}
